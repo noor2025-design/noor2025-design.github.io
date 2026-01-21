@@ -1,0 +1,34 @@
+:root {
+  --color: pink;
+  --background: #fff;
+  --body-copy: 1rem;
+  --heading-copy: calc(var(var(--body-copy) * 3));
+  --gutter: 2rem;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--color);
+  background-color: var(--background);
+  font-size: var(var(--heading-copy));
+  block-size: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-items: center;
+}
+
+h1 {
+  font-size: var(var(--heading-copy));
+}
+ul {
+  padding-inline: var(--gutter);
+  display: grid;
+  gap: var(--gutter);
+}
+
+hgroup,
+footer {
+  color: var(--background);
+  background-color: var(--color);
+  padding-inline: var(--gutter);
+}
