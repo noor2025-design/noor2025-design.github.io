@@ -1,18 +1,32 @@
 :root {
-  /* --color: pink; */
-  /* --background: #fff; */
+  --color-primary-light: white;
+  --blue: #0000f0;
+  --green: #bfff04;
   --body-copy: 1rem;
-  --heading-copy: calc(var(var(--body-copy) * 3));
-  --gutter: 2rem;
+  /* --heading-copy: calc(var(var(--body-copy) * 3)); */
+  /* --gutter: 2rem; */
 }
 
+@font-face {
+  font-family: "Folsom";
+  src: url("./fonts/folsom-black-web.otf");
+}
 /* BACKGROUND PATTERN */
 /* I wanted to use a background pattern on my page */
 /* I found this pattern from CSS Generator: https://css-pattern.com/shuriken/ */
 /* Conic-gradient is a gradient that rotates around the center */
 /* Conic-gradient takes parameters for the specific angle, position and color */
 /* g1-g4 establishes the background layers which are used in the background property */
-html {
+
+
+body {
+  font-family: sans-serif;
+  color: var(--color-primary-light);
+  font-size: var(var(--heading-copy));
+  block-size: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-items: center;
   --s: 30px; /* control the size*/
   --c1: #bfff04;
   --c2: #0000f0;
@@ -38,26 +52,20 @@ html {
      0 0/calc(3*var(--s)) calc(3*var(--s)) var(--c2);
 }
 
-body {
-  font-family: sans-serif;
-  color: var(--color);
-  background-color: var(--background);
+/* h1 {
   font-size: var(var(--heading-copy));
-  block-size: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-items: center;
-}
-
-h1 {
-  font-size: var(var(--heading-copy));
-}
+} */
 ul {
   padding-inline: var(--gutter);
   display: grid;
   gap: var(--gutter);
 }
 
+header{
+    background-color: var(--color-primary-light);
+    margin: 2rem 2rem 2rem 0;
+    height: 500px;
+}
 hgroup,
 footer {
   color: var(--background);
