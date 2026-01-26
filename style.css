@@ -83,10 +83,12 @@ header > section {
 hgroup{
     padding-block: 4rem 6rem;
 }
-/* .intro-section {
-    display: flex;
+.intro-section {
+    margin-block: 10rem;
 
-} */
+}
+
+
 .intro-section > p{
     color: var(--blue);
     padding-block: 5rem;
@@ -104,6 +106,7 @@ hgroup{
     flex-direction: column;
     align-items: center;
     padding-block: 2rem;
+    margin-block: 8rem;
 }
 .article-row article{
     background-color: var(--color-primary-light);
@@ -123,9 +126,11 @@ article > p{
 footer {
   color: var(--blue);
   background-color: var(--color-primary-light);
-  padding-block: 1rem;
+  padding-block: 1.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: .5rem;
+}
+footer a{
+    font-weight: 700;
 }
