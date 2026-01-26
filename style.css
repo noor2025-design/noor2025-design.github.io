@@ -21,7 +21,7 @@
 
 body {
   font-family: sans-serif;
-  color: var(--color-primary-light);
+  /* color: var(--color-primary-light); */
   font-size: var(var(--heading-copy));
   block-size: 100vh;
   display: grid;
@@ -60,15 +60,31 @@ ul {
   display: grid;
   gap: var(--gutter);
 }
+h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+    color: var(--green);
 
-header{
+}
+.header-container{
     background-color: var(--color-primary-light);
     margin: 2rem 2rem 2rem 0;
-    height: 500px;
+    padding: 2rem;
+    width: auto;
+    font-family: "Folsom", sans-serif;
 }
-hgroup,
+header > section {
+    display: flex;
+    justify-content: space-between;
+    color: var(--blue);
+}
+hgroup{
+    padding-block: 4rem 6rem;
+}
+/* hgroup,
 footer {
   color: var(--background);
   background-color: var(--color);
   padding-inline: var(--gutter);
-}
+} */
