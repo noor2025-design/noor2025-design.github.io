@@ -24,55 +24,22 @@ header{
   width: 100%;
 }
 
-h1{
+
+h1,h2,h3,h4,h5,h6{
   font-family: var(--font-primary);
   font-size: 5rem;
   color: var(--primary-font-color);
+  
+}
+h1, h2{
+display: flex;
+justify-content: center;
 }
 
-h2{
-  font-family: var(--font-primary);
-  font-size: 5rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
+h3,h4,h5,h6{
+  font-size: 3rem;
 }
 
-h3{
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
-}
-h4{
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
-}
-h5{
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
-}
-h6{
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
-}
-h7{
-  font-family: var(--font-primary);
-  font-size: 3rem;
-  color: var(--primary-font-color);
-  display: flex;
-  justify-content: center;
-}
 
 nav{
   width: 100%;
@@ -127,6 +94,20 @@ margin-block: 2rem;
   height: 100%;
   object-fit: cover;
 }
+.project-section{
+  background-color: var(--color-secondary-background);
+  padding: 2rem 8rem;
+}
+
+.project-section p, .project-number, .project-arrow {
+color: var(--color-primary-background);
+}
+
+.project-card{
+
+}
+
+
 
 /* Media Query for small desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
