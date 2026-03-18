@@ -1,11 +1,10 @@
 :root {
-  --color-primary-background:#E7D5C5 ;
-  --color-secondary-background: #372B29;
-  --primary-font-color: #F8A819;
+  --color-primary-background: #e7d5c5;
+  --color-secondary-background: #372b29;
+  --primary-font-color: #f8a819;
   --body-copy: 1rem;
   --font-primary: "Fahkwang", sans-serif;
   --font-secondary: "Azeret Mono", sans-serif;
-  
 }
 /* I downloaded a font from a website and got the syntax for CSS Rule @font-face from https://www.w3schools.com/cssref/atrule_font-face.php */
 /* @font-face {
@@ -13,50 +12,53 @@
   src: url("./fonts/folsom-black-web.otf");
 } */
 
-
 body {
   font-family: var(--font-secondary);
   background-color: var(--color-primary-background);
- 
 }
 
-header{
+header {
   width: 100%;
 }
 
-
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary);
-  font-size: 5rem;
   color: var(--primary-font-color);
-  
 }
-h1, h2{
-display: flex;
-justify-content: center;
+h1,
+h2 {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
-h3,h4,h5,h6{
+h3,
+h4,
+h5,
+h6 {
   font-size: 3rem;
 }
 
-
-nav{
+nav {
   width: 100%;
   padding: 2rem 4rem;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   position: relative;
   font-family: var(--font-primary);
   color: var(--primary-font-color);
-
 }
 
-.nav-links::after{
+.nav-links::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -67,52 +69,109 @@ nav{
   transform: translateX(-50%);
 }
 
-.intro-section{
+.intro-section {
   width: 100%;
   padding: 2rem 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about-section{
+.about-section {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
 
-.image-wrapper{
-width: 30%;
-aspect-ratio: 1 / 1;
-border-radius: 50%;
-overflow: hidden;
-margin-block: 2rem;
+.image-wrapper {
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-block: 2rem;
 }
 
-.image-wrapper > img{
+.image-wrapper > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project-section{
+.project-section {
   background-color: var(--color-secondary-background);
   padding: 2rem 8rem;
 }
-
-.project-section p, .project-number, .project-arrow {
-color: var(--color-primary-background);
+.project-section h2 {
+  position: relative;
 }
 
-.project-card{
-
+/* calc property affecting the width creates a line that is 50% of the h2 minus half the length of the word minus the padding */
+.project-section h2::before,
+.project-section h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(50% - 130px - 2rem);
+  background-color: var(--primary-font-color);
+  top: 50%;
 }
 
+.project-section h2::before {
+  left: 1rem;
+}
+.project-section h2::after {
+  right: 1rem;
+}
 
+.project-section header {
+  padding-block: 2rem;
+}
+.project-section header p {
+  padding-block: 2rem;
+}
+.project-section p,
+.project-number,
+.project-arrow {
+  color: var(--color-primary-background);
+}
+
+.project-number {
+  font-size: 5rem;
+  padding-right: 1rem;
+}
+
+.project-arrow {
+  font-size: 5rem;
+}
+
+.project-card {
+  display: flex;
+  position: relative;
+  padding-block: 2rem;
+}
+
+.project-card::before,
+.project-card:last-of-type::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 2rem);
+  background-color: var(--primary-font-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.project-card::before {
+  top: 0;
+}
+.project-card:last-of-type::after {
+  bottom: 0;
+}
+.project-subtitle {
+  padding-block: 1rem;
+}
 
 /* Media Query for small desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
 @media (769px <= width <= 1024px) {
- 
 }
 /* Media Query for large desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
