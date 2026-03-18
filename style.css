@@ -30,11 +30,17 @@ h6 {
   font-family: var(--font-primary);
   color: var(--primary-font-color);
 }
+
+h1{
+  padding-bottom: 2rem;
+  text-align: center;
+}
 h1,
 h2 {
   font-size: 5rem;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 h3,
@@ -43,6 +49,7 @@ h5,
 h6 {
   font-size: 3rem;
 }
+
 
 nav {
   width: 100%;
@@ -61,7 +68,7 @@ nav {
 .nav-links::after {
   content: "";
   position: absolute;
-  height: 2px;
+  height: 1px;
   width: 95%;
   background-color: var(--color-secondary-background);
   bottom: 0;
@@ -75,6 +82,18 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+h1::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+  background-color: var(--color-secondary-background);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .about-section {
   display: flex;
@@ -100,9 +119,7 @@ nav {
   background-color: var(--color-secondary-background);
   padding: 2rem 8rem;
 }
-.project-section h2 {
-  position: relative;
-}
+
 
 /* calc property affecting the width creates a line that is 50% of the h2 minus half the length of the word minus the padding */
 .project-section h2::before,
@@ -141,6 +158,10 @@ nav {
 
 .project-arrow {
   font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 .project-card {
@@ -167,6 +188,13 @@ nav {
 }
 .project-subtitle {
   padding-block: 1rem;
+}
+
+footer{
+  padding: 2rem;
+  display: flex;
+  background-color: var(--primary-font-color);
+  justify-content: space-between;
 }
 
 /* Media Query for small desktops */
