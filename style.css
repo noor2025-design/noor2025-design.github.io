@@ -4,7 +4,7 @@
   --primary-font-color: #F8A819;
   --body-copy: 1rem;
   --font-primary: "Fahkwang", sans-serif;
-  --font-secondary: "azeret Mono", sans-serif;
+  --font-secondary: "Azeret Mono", sans-serif;
   
 }
 /* I downloaded a font from a website and got the syntax for CSS Rule @font-face from https://www.w3schools.com/cssref/atrule_font-face.php */
@@ -24,6 +24,56 @@ header{
   width: 100%;
 }
 
+h1{
+  font-family: var(--font-primary);
+  font-size: 5rem;
+  color: var(--primary-font-color);
+}
+
+h2{
+  font-family: var(--font-primary);
+  font-size: 5rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+h4{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+h5{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+h6{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+h7{
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+}
+
 nav{
   width: 100%;
   padding: 2rem 4rem;
@@ -34,6 +84,8 @@ nav{
   justify-content: space-between;
   padding: 1rem;
   position: relative;
+  font-family: var(--font-primary);
+  color: var(--primary-font-color);
 
 }
 
