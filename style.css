@@ -184,7 +184,9 @@ nav {
   position: relative;
   padding-block: 2rem;
   max-width: 900px;
+  width: 100%;
 }
+
 
 .project-card::before,
 .project-card:last-of-type::after {
@@ -202,9 +204,11 @@ nav {
 .project-card:last-of-type::after {
   bottom: 0;
 }
+
 .project-subtitle {
   padding-block: 1rem;
 }
+
 
 .project-description{
   font-size: 0.85rem;
