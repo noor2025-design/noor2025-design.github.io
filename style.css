@@ -127,7 +127,6 @@ nav {
  
 }
 
-
 /* calc property affecting the width creates a line that is 50% of the h2 minus half the length of the word minus the padding */
 .project-section h2::before,
 .project-section h2::after {
@@ -164,6 +163,10 @@ color: var(--color-primary-background);
   padding-right: 1rem;
 }
 
+/* I wanted all the arrows to align to the right, but the way my project functions was structured was causing alignment issues.
+   I looked up how to fix this and found this article on margin: auto, which helped me understand how margin-left: auto
+   uses available space to push elements to the right.
+   Source: https://dev.to/ritikaagrawal08/all-about-margin-auto-in-css-centering-and-more-2b2g */
 .project-arrow {
   font-size: 4rem;
   display: flex;
@@ -171,7 +174,6 @@ color: var(--color-primary-background);
   justify-content: flex-end;
   margin-left: auto;
   padding-left: 0.5rem;
-
 }
 
 .project-card {
