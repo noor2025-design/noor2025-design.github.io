@@ -6,11 +6,6 @@
   --font-primary: "Fahkwang", sans-serif;
   --font-secondary: "Azeret Mono", sans-serif;
 }
-/* I downloaded a font from a website and got the syntax for CSS Rule @font-face from https://www.w3schools.com/cssref/atrule_font-face.php */
-/* @font-face {
-  font-family: "Folsom";
-  src: url("./fonts/folsom-black-web.otf");
-} */
 
 body {
   font-family: var(--font-secondary);
@@ -104,7 +99,7 @@ nav {
   align-items: center;
   
 }
-.about-info{
+.about-info {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -161,7 +156,7 @@ nav {
 .project-section p,
 .project-number,
 .project-arrow {
-  color: var(--color-primary-background);
+color: var(--color-primary-background);
 }
 
 .project-number {
@@ -212,7 +207,7 @@ nav {
 
 .project-description{
   font-size: 0.85rem;
-  /* word-spacing: -2px; */
+  
 }
 
 footer{
@@ -259,7 +254,7 @@ h6 {
 }
 .project-section h2::before,
 .project-section h2::after {
-  width: calc(50% - 130px - 2rem);
+width: calc(50% - 130px - 2rem);
 }
 .about-section{
   padding-block: 3rem;
