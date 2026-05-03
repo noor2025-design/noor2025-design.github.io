@@ -12,8 +12,9 @@ body {
   background-color: var(--color-primary-background);
 }
 
-header {
+.top-header{
   width: 100%;
+  min-height: 150px;
 }
 
 h1,
@@ -73,6 +74,7 @@ nav {
 
 .intro-section {
   width: 100%;
+  min-height: calc(100vh - 150px);
   padding: 2rem 4rem 4rem;
   display: flex;
   flex-direction: column;
