@@ -8,8 +8,8 @@ console.log(introHeadingArray);
 // splits a string into an array 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
-introHeadingArray.forEach((character,index)=>{
-let spanElement = `<span>${character}</span>`    
+introHeadingArray.forEach((character)=>{
+let spanElement = `<span class="animate-translate"><span class="animate-grow">${character}</span></span>`    
 spanText += spanElement
 })
 introHeading.innerHTML = spanText
@@ -17,6 +17,6 @@ introHeading.innerHTML = spanText
 let allSpanElements = document.querySelectorAll("h1 span")
 allSpanElements.forEach((element)=>{
     // creates a random number between 0-.5
-    let offset = Math.random()*.5
+    let offset = Math.random()*1
     element.style.animationDelay = `${offset}s`
 })

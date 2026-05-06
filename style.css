@@ -50,11 +50,19 @@ h6 {
 h1 span {
   white-space: pre;
   /* animation: letter-pop-up 2s ease-in forwards; */
-  animation: grow .2s forwards, fade-in .2s forwards, slide-in 1s forwards;
+  animation: fade-in .2s forwards;
   animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   opacity: 0;
-  transform: translateY(100px) scale(0.5);
+
+}
+.animate-grow{
+  animation: grow .5s forwards;
+  transform: scale(0.5);
   transform-origin: center;
+}
+.animate-translate{
+  animation: slide-in 2s forwards;
+  transform: translateY(100px);
 }
 @keyframes letter-pop-up {
   0% {
@@ -72,7 +80,7 @@ h1 span {
 }
 @keyframes grow {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.1);
   }
 
   100% {
@@ -98,6 +106,8 @@ h1 span {
   }
 }
 /* tutor helped me with applying mulitple keyframes in an animation */
+/* https://css-tricks.com/advanced-css-animation-using-cubic-bezier/ */
+
 nav {
   width: 100%;
   padding: 2rem 4rem;
