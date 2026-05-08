@@ -12,7 +12,12 @@ body {
   background-color: var(--color-primary-background);
   position: relative;
 }
-
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .top-header {
   width: 100%;
   min-height: 150px;
@@ -31,6 +36,8 @@ h6 {
 h1 {
   padding-bottom: 4rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 h1,
 h2 {
@@ -48,31 +55,23 @@ h6 {
 }
 /* h1 ANIMATION */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/white-space */
-h1 span {
+/* h1 span {
   white-space: pre;
-  /* animation: letter-pop-up 2s ease-in forwards; */
-  /* animation: fade-in .2s forwards; */
-  /* opacity: 0; */
-
-}
-.animate-grow{
+} */
+/* .animate-grow{
   display: inline-block;
   opacity: 0;
   animation: fade-in .2s forwards;
-  /* transform: scale(0.1); */
   transform-origin: center;
-  /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-  /* animation-timing-function: ease-in; */
+ 
 }
 .animate-translate{
   animation: slide-in 1.5s forwards;
   transform: translateY(100px);
-  /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-   /* animation-timing-function: ease-in; */
-}
+} */
 /* bounce effect on cubic bezier https://www.jussivirtanen.fi/writing/bounce-effect */
 
-@keyframes grow {
+/* @keyframes grow {
   0% {
     transform: scale(0.1);
   }
@@ -98,7 +97,7 @@ h1 span {
   100% {
     transform: translateY(0);
   }
-}
+} */
 /* tutor helped me with applying mulitple keyframes in an animation */
 /* https://css-tricks.com/advanced-css-animation-using-cubic-bezier/ */
 
@@ -134,12 +133,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.about-section h2 {
+/* .about-section h2 {
   padding-bottom: 1rem;
-}
-.about-section h2::after {
+} */
+/* .about-section h2::after {
   content: "";
   position: absolute;
   height: 1px;
@@ -148,25 +148,57 @@ nav {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 .about-section {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+  justify-content: center;
+  padding-block: 2rem;
+  height: 100vh;
 }
-.about-info {
+
+.about-section header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 70%; */
+  max-width: 300px;
+  margin-block: 2rem;
+}
+.about-section h2:first-of-type{
+  /* left: 0; */
+  /* transform: translateX(50%); */
+  align-self: flex-start;
+ 
+}
+.about-section h2:last-of-type{
+  left: 75%;
+  transform: translateX(-50%);
+  align-self: flex-start;
+ 
+}
+
+  .about-text {
+    width: 100%;
+    font-size: 1rem;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    padding-inline: 2rem;
+  }
+/* .about-info {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-}
+} */
 .image-wrapper {
-  width: 70%;
+  width:100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  margin-block: 2rem;
 }
 
 .image-wrapper > img {
@@ -180,6 +212,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* calc property affecting the width creates a line that is 50% of the h2 minus half the length of the word minus the padding */
@@ -296,7 +329,7 @@ transform: translateX(0) scale(1);
 transform: translateX(0) scale(1);
 }
 100%{
- transform: translateX(0) scale(10); 
+ transform: translateX(0) scale(15); 
 }
 }
 
@@ -311,7 +344,7 @@ transform: translateX(0) scale(1);
 transform: translateX(0) scale(1);
 }
 100%{
- transform: translateX(0) scale(10); 
+ transform: translateX(0) scale(15); 
 }
 }
 #svg-circle-one{
@@ -346,7 +379,7 @@ transform: translateX(0) scale(1);
     padding-right: 1rem;
   }
   .image-wrapper {
-    width: 50%;
+    /* width: 50%; */
     max-width: 300px;
   }
   .intro-section {
@@ -364,16 +397,13 @@ transform: translateX(0) scale(1);
     padding-block: 3rem;
     max-width: 900px;
   }
-  .about-info {
+  /* .about-info {
     flex-direction: row-reverse;
     justify-content: center;
-  }
+  } */
   .about-text {
-    width: 50%;
+    /* width: 50%; */
     font-size: 1rem;
-    flex-direction: column;
-    display: flex;
-    gap: 1rem;
   }
 }
 /* Media Query for large desktops */
