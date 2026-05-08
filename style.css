@@ -363,7 +363,7 @@ transform: translateX(0) scale(1);
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
 @media (width >= 769px) {
   h1 {
-    font-size: 5rem;
+    font-size: 7rem;
   }
   .project-section {
     padding: 2rem 8rem;
