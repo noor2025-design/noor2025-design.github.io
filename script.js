@@ -21,3 +21,10 @@ allSpanElements.forEach((element)=>{
     element.style.animationDelay = `${offset}s`
     element.querySelector("span").style.animationDelay = `${offset}s`
 })
+
+let svgElement = document.getElementById("page-load-svg")
+let circleSvg = document.getElementById("svg-circle-one")
+circleSvg.addEventListener("animationend", () => {
+    svgElement.remove()
+});
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event

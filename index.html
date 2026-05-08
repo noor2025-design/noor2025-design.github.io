@@ -1,169 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="assets/icons/favicon.ico" rel="icon" sizes="any" />
-    <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml" />
-    <!-- Need to make 512x512 icon named touch.png -->
-    <!-- <link href="assets/icons/touch.png"  rel="apple-touch-icon"> -->
-    <meta
-      property="description"
-      content="A curated index of web projects from Typography and Interaction class exploring type, layout and interaction design at Parsons School of Design MPS-CD program at The New School."
-    />
-    <!-- Need to include an image to og image -->
-    <!-- <meta content="" property="og:image"> -->
-    <!-- Need to include a description of the og image -->
-    <!-- <meta content="" property="og:image:alt" > -->
-    <meta name="robots" content="noindex, nofollow" />
-    <link href="reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-   <script defer src="script.js"></script>
-  </head>
-  <body>
-    <header class="top-header">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="mailto:noor.abdussaboor@gmail.com">CONTACT</a></li>
-          <li><a href="https://www.google.com">PORTFOLIO</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="intro-section">
-        <h1>NOOR ABDUSSABOOR</h1>
-        <section class="about-section">
-          <h2>ABOUT</h2>
-          <div class="about-info">
-            <div class="image-wrapper">
-              <img src="./assets/images/about-photo.jpeg" alt="about" />
-            </div>
-            <p class="about-text">
-              <span
-                >Noor is a product & brand designer who codes, working across interaction, experience, visual systems, and branding.</span
-              ><span
-                >Her work explores how ideas move from concept to structure,
-                interface, and experience.</span
-              >
-            </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="assets/icons/favicon.ico" rel="icon" sizes="any" />
+  <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml" />
+  <!-- Need to make 512x512 icon named touch.png -->
+  <!-- <link href="assets/icons/touch.png"  rel="apple-touch-icon"> -->
+  <meta property="description"
+    content="A curated index of web projects from Typography and Interaction class exploring type, layout and interaction design at Parsons School of Design MPS-CD program at The New School." />
+  <!-- Need to include an image to og image -->
+  <!-- <meta content="" property="og:image"> -->
+  <!-- Need to include a description of the og image -->
+  <!-- <meta content="" property="og:image:alt" > -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="reset.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="top-header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="mailto:noor.abdussaboor@gmail.com">CONTACT</a></li>
+        <li><a href="https://www.google.com">PORTFOLIO</a></li>
+      </ul>
+    </nav>
+  </header>
+  <svg id="page-load-svg">
+    <mask id="mask-reveal">
+      <!-- Everything under a white pixel will be visible -->
+      <rect width="100%" height="100%" fill="white" />
+
+      <!-- Everything under a black pixel will be invisible -->
+      <circle id="svg-circle-one" cx="40%" cy="50%" r="10vw" />
+      <circle id="svg-circle-two" cx="60%" cy="50%" r="10vw" />
+    </mask>
+    <rect width="100%" height="100%" fill="#f8a819" mask="url(#mask-reveal)" />
+  </svg>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/mask -->
+  <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/circle -->
+  <main>
+    <section class="intro-section">
+      <h1>NOOR ABDUSSABOOR</h1>
+      <section class="about-section">
+        <h2>ABOUT</h2>
+        <div class="about-info">
+          <div class="image-wrapper">
+            <img src="./assets/images/about-photo.jpeg" alt="about" />
           </div>
-        </section>
-      </section>
-      <section class="project-section">
-        <header>
-          <h2>WORK</h2>
-          <p>
-            This is a collection of web design projects built across two semesters of Typography and Interaction at Parsons School of Design (MPS-CD program) exploring the intersection of code, typography and interface design with HTML, CSS and Javascript.
+          <p class="about-text">
+            <span>Noor is a product & brand designer who codes, working across interaction, experience, visual systems,
+              and branding.</span><span>Her work explores how ideas move from concept to structure,
+              interface, and experience.</span>
           </p>
-        </header>
-
-        <article class="project-card">
-          <div class="project-number">01</div>
-          <div>
-            <h3>MANUSCRIPT</h3>
-            <p class="project-subtitle">Typesetting in HTML & CSS</p>
-            <p class="project-description">
-              Translated a written text into a structured, web-based layout
-              while considering typography and design.
-            </p>
-          </div>
-
-          <div class="project-arrow">
-            <a
-              href="https://noor2025-design.github.io/manuscript/"
-              target="_blank"
-              >→
-            </a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <div>
-            <h4>SPREAD</h4>
-            <p class="project-subtitle">Typesetting a design theory</p>
-            <p class="project-description">
-              A collaborative typesetting of a design theory essay exploring
-              hierarchy, animation and responsive layout for screen and print.
-            </p>
-          </div>
-          <div class="project-arrow">
-            <a href="https://noor2025-design.github.io/spread/" target="_blank">
-            →</a></div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <div>
-            <h5>BINDING</h5>
-            <p class="project-subtitle">Responsive digital book</p>
-            <p class="project-description">
-              A layout built around linework as a structural motif to reflect
-              the theme of the readings. Designed with constraints, responsivity,
-              typography hierarchy and block quotes.
-            </p>
-          </div>
-          <div class="project-arrow">
-            <a href="https://noor2025-design.github.io/binding/" target="_blank">
-            →</a></div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">04</div>
-          <div>
-            <h6>LINKS</h6>
-            <p class="project-subtitle">Integrating APIs & Media</p>
-            <p class="project-description">
-              A digital interpretation of an Are.na channel curated about life,
-              culture and history in Hong Kong.
-            </p>
-          </div>
-          <div class="project-arrow">
-            <a href="https://noor2025-design.github.io/links/" target="_blank">
-            →</a></div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-number">05</div>
-          <div>
-            <h6>FUNCTIONS</h6>
-            <p class="project-subtitle">Interactive Web Tool</p>
-            <p class="project-description">A interactive web app that generates arabic food recommendations in new york city using a custom designed dataset</p>
-          </div>
-          <div class="project-arrow">
-            <a href="https://noor2025-design.github.io/functions/" target="_blank">
-            →</a></div>
-        </article>
-
-         <article class="project-card">
-          <div class="project-number">06</div>
-          <div>
-            <h6>PORTRAIT</h6>
-            <p class="project-subtitle">Artwork</p>
-            <p class="project-description">An web-based interpretation of visual artwork using only HTML, CSS, and Javascript, exploring how compositions can be reconstructed through code, interaction, and responsive design.</p>
-          </div>
-          <div class="project-arrow">
-            <!-- <a href="" target="_blank"> -->
-            →</a></div>
-        </article>
+        </div>
       </section>
+    </section>
+    <section class="project-section">
+      <header>
+        <h2>WORK</h2>
+        <p>
+          This is a collection of web design projects built across two semesters of Typography and Interaction at
+          Parsons School of Design (MPS-CD program) exploring the intersection of code, typography and interface design
+          with HTML, CSS and Javascript.
+        </p>
+      </header>
 
-    </main>
-    <footer>
-      <p>© 2026 Noor Abdussaboor</p>
-      <p>
-        <a href="https://typography-interaction-2526.github.io/"
-          >Typography and Interaction</a
-        >
-      </p>
-    </footer>
-  </body>
+      <article class="project-card">
+        <div class="project-number">01</div>
+        <div>
+          <h3>MANUSCRIPT</h3>
+          <p class="project-subtitle">Typesetting in HTML & CSS</p>
+          <p class="project-description">
+            Translated a written text into a structured, web-based layout
+            while considering typography and design.
+          </p>
+        </div>
+
+        <div class="project-arrow">
+          <a href="https://noor2025-design.github.io/manuscript/" target="_blank">→
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-number">02</div>
+        <div>
+          <h4>SPREAD</h4>
+          <p class="project-subtitle">Typesetting a design theory</p>
+          <p class="project-description">
+            A collaborative typesetting of a design theory essay exploring
+            hierarchy, animation and responsive layout for screen and print.
+          </p>
+        </div>
+        <div class="project-arrow">
+          <a href="https://noor2025-design.github.io/spread/" target="_blank">
+            →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-number">03</div>
+        <div>
+          <h5>BINDING</h5>
+          <p class="project-subtitle">Responsive digital book</p>
+          <p class="project-description">
+            A layout built around linework as a structural motif to reflect
+            the theme of the readings. Designed with constraints, responsivity,
+            typography hierarchy and block quotes.
+          </p>
+        </div>
+        <div class="project-arrow">
+          <a href="https://noor2025-design.github.io/binding/" target="_blank">
+            →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-number">04</div>
+        <div>
+          <h6>LINKS</h6>
+          <p class="project-subtitle">Integrating APIs & Media</p>
+          <p class="project-description">
+            A digital interpretation of an Are.na channel curated about life,
+            culture and history in Hong Kong.
+          </p>
+        </div>
+        <div class="project-arrow">
+          <a href="https://noor2025-design.github.io/links/" target="_blank">
+            →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-number">05</div>
+        <div>
+          <h6>FUNCTIONS</h6>
+          <p class="project-subtitle">Interactive Web Tool</p>
+          <p class="project-description">A interactive web app that generates arabic food recommendations in new york
+            city using a custom designed dataset</p>
+        </div>
+        <div class="project-arrow">
+          <a href="https://noor2025-design.github.io/functions/" target="_blank">
+            →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-number">06</div>
+        <div>
+          <h6>PORTRAIT</h6>
+          <p class="project-subtitle">Artwork</p>
+          <p class="project-description">An web-based interpretation of visual artwork using only HTML, CSS, and
+            Javascript, exploring how compositions can be reconstructed through code, interaction, and responsive
+            design.</p>
+        </div>
+        <div class="project-arrow">
+          <!-- <a href="" target="_blank"> -->
+          →</a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <footer>
+    <p>© 2026 Noor Abdussaboor</p>
+    <p>
+      <a href="https://typography-interaction-2526.github.io/">Typography and Interaction</a>
+    </p>
+  </footer>
+</body>
+
 </html>

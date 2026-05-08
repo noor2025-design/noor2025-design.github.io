@@ -10,6 +10,7 @@
 body {
   font-family: var(--font-secondary);
   background-color: var(--color-primary-background);
+  position: relative;
 }
 
 .top-header {
@@ -272,6 +273,58 @@ footer {
   align-items: center;
   gap: 1rem;
 }
+
+/* svg-animation */
+
+#page-load-svg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes left-to-right{
+0%{
+transform: translateX(0) scale(1);
+}
+25%{
+ transform: translateX(10vw) scale(1); 
+}
+50%{
+transform: translateX(0) scale(1);
+}
+100%{
+ transform: translateX(0) scale(10); 
+}
+}
+
+@keyframes right-to-left{
+0%{
+transform: translateX(0) scale(1);
+}
+25%{
+ transform: translateX(-10vw) scale(1); 
+}
+50%{
+transform: translateX(0) scale(1);
+}
+100%{
+ transform: translateX(0) scale(10); 
+}
+}
+#svg-circle-one{
+  animation: left-to-right 5s forwards ease-in-out;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#svg-circle-two{
+  animation: right-to-left 5s forwards ease-in-out;
+  transform-origin: center;
+   transform-box: fill-box;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform-box */
 
 /* Media Query for small desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
