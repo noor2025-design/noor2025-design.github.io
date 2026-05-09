@@ -34,10 +34,11 @@ h6 {
 }
 
 h1 {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+  /* padding-top: 4rem; */
 }
 h1,
 h2 {
@@ -53,6 +54,41 @@ h5,
 h6 {
   font-size: 1.75rem;
 }
+h1::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  background-color: var(--color-secondary-background);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: line-grow 2s 3s forwards;
+}
+@keyframes line-grow{
+from{
+width: 0%;
+}
+
+to{
+width: 30%;
+}
+}
+.intro-subtitle{
+  font-family: var(--font-primary);
+  color: var(--primary-font-color);
+  font-size: 1.25rem;
+  margin-block: 2rem;
+}
+
+.intro-tagline{
+  font-family: var(--font-primary);
+  color: var(--color-secondary-background);
+  font-size: 1.25rem;
+  text-align: center;
+  margin-block: 2rem;
+}
+
 /* h1 ANIMATION */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/white-space */
 /* h1 span {
@@ -109,7 +145,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0 2rem 1.5rem;
   position: relative;
   font-family: var(--font-primary);
   color: var(--primary-font-color);
@@ -119,23 +155,28 @@ nav {
   content: "";
   position: absolute;
   height: 1px;
-  width: 95%;
+  width: calc(100% - 4rem);
   background-color: var(--color-secondary-background);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+.nav-links > li:hover{
+color: var(--color-secondary-background);
+}
 
 .intro-section {
   width: 100%;
   min-height: calc(100vh - 150px);
-  padding: 2rem 4rem 4rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+.intro-section img{
+ justify-self: flex-end;
+}
 /* .about-section h2 {
   padding-bottom: 1rem;
 } */
@@ -385,7 +426,13 @@ transform: translateX(0) scale(1);
   .intro-section {
     padding: 2rem 6rem 4rem;
   }
+.intro-subtitle{
+  font-size: 3rem;
+}
 
+.intro-tagline{
+  font-size: 1.75rem;
+}
   .project-arrow {
     font-size: 5rem;
   }
@@ -405,6 +452,7 @@ transform: translateX(0) scale(1);
     /* width: 50%; */
     font-size: 1rem;
   }
+  
 }
 /* Media Query for large desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
