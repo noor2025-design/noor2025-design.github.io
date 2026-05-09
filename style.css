@@ -6,7 +6,7 @@
   --font-primary: "Fahkwang", sans-serif;
   --font-secondary: "Azeret Mono", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -14,7 +14,7 @@ body {
   background-color: var(--color-primary-background);
   position: relative;
 }
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,23 +67,23 @@ h1::after {
   transform: translateX(-50%);
   animation: line-grow 2s 3s forwards;
 }
-@keyframes line-grow{
-from{
-width: 0%;
-}
+@keyframes line-grow {
+  from {
+    width: 0%;
+  }
 
-to{
-width: 30%;
+  to {
+    width: 30%;
+  }
 }
-}
-.intro-subtitle{
+.intro-subtitle {
   font-family: var(--font-primary);
   color: var(--primary-font-color);
   font-size: 1.25rem;
   margin-block: 2rem;
 }
 
-.intro-tagline{
+.intro-tagline {
   font-family: var(--font-primary);
   color: var(--color-secondary-background);
   font-size: 1.25rem;
@@ -163,8 +163,8 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
-.nav-links > li:hover{
-color: var(--color-secondary-background);
+.nav-links > li:hover {
+  color: var(--color-secondary-background);
 }
 
 .intro-section {
@@ -177,26 +177,30 @@ color: var(--color-secondary-background);
   justify-content: center;
   position: relative;
 }
-.intro-section img{
- position: absolute;
- bottom: 2rem;
-left: 50%;
-transform: translate(-50%, 0);
-animation: bounce 2s 4s;
-cursor: pointer;
-
+.intro-section img {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: bounce 2s 4s;
+  cursor: pointer;
+  width: 3rem;
 }
 
 /* pulled this arrow animation from here - https://codepen.io/bisaillonyannick/pen/pvZeGg */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translate(-50%,0);
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(-50%, 0);
   }
   40% {
-    transform: translate(-50%,-30px);
+    transform: translate(-50%, -30px);
   }
   60% {
-    transform: translate(-50%,-15px);
+    transform: translate(-50%, -15px);
   }
 }
 /* .about-section h2 {
@@ -222,36 +226,33 @@ cursor: pointer;
   height: 100vh;
 }
 
-.about-section header{
+.about-section header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   margin-block: 2rem;
   /* padding-inline: 4rem; */
- 
 }
-.about-section h2:first-of-type{
+.about-section h2:first-of-type {
   /* left: 0; */
   /* transform: translateX(50%); */
   align-self: flex-start;
- 
 }
-.about-section h2:last-of-type{
+.about-section h2:last-of-type {
   left: 75%;
   transform: translateX(-50%);
   align-self: flex-start;
- 
 }
 
-  .about-text {
-    width: 100%;
-    font-size: 1rem;
-    flex-direction: column;
-    display: flex;
-    gap: 1rem;
-    padding-inline: 2rem;
-  }
+.about-text {
+  width: 100%;
+  font-size: 1rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding-inline: 2rem;
+}
 /* .about-info {
   display: flex;
   flex-direction: column;
@@ -259,20 +260,19 @@ cursor: pointer;
   align-items: center;
 } */
 .image-wrapper {
-  width:100%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   /* margin-inline: 4rem; */
   position: relative;
-  
 }
-.image-shadow{
+.image-shadow {
   position: relative;
- display: inline-block;
- width: 80%;
+  display: inline-block;
+  width: 80%;
 }
-.image-shadow::after{
+.image-shadow::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -280,7 +280,7 @@ cursor: pointer;
   background-color: var(--primary-font-color);
   position: absolute;
   z-index: 1;
-  transform: translate(30px,-20px);
+  transform: translate(30px, -20px);
   top: 0;
   left: 0;
 }
@@ -289,7 +289,7 @@ cursor: pointer;
   height: 100%;
   object-fit: cover;
   z-index: 2;
-position: relative;
+  position: relative;
 }
 .project-section {
   background-color: var(--color-secondary-background);
@@ -326,11 +326,27 @@ position: relative;
   padding-block: 2rem;
 }
 .project-section p,
-.project-number,
-.project-arrow {
+.project-number
+{
   color: var(--color-primary-background);
 }
-
+.project-arrow a{
+  display: inline-flex;
+  background-color: var(--primary-font-color);
+  border-radius: 50%;
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-arrow img{
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  position: relative;
+}
 .project-number {
   font-size: 2rem;
   padding-right: 1rem;
@@ -394,7 +410,7 @@ footer {
 
 /* svg-animation */
 
-#page-load-svg{
+#page-load-svg {
   position: fixed;
   top: 0;
   left: 0;
@@ -403,44 +419,44 @@ footer {
   z-index: 3;
 }
 
-@keyframes left-to-right{
-0%{
-transform: translateX(0) scale(1);
-}
-25%{
- transform: translateX(10vw) scale(1); 
-}
-50%{
-transform: translateX(0) scale(1);
-}
-100%{
- transform: translateX(0) scale(15); 
-}
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(10vw) scale(1);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(0) scale(15);
+  }
 }
 
-@keyframes right-to-left{
-0%{
-transform: translateX(0) scale(1);
+@keyframes right-to-left {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-10vw) scale(1);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(0) scale(15);
+  }
 }
-25%{
- transform: translateX(-10vw) scale(1); 
-}
-50%{
-transform: translateX(0) scale(1);
-}
-100%{
- transform: translateX(0) scale(15); 
-}
-}
-#svg-circle-one{
+#svg-circle-one {
   animation: left-to-right 5s forwards ease-in-out;
   transform-origin: center;
   transform-box: fill-box;
 }
-#svg-circle-two{
+#svg-circle-two {
   animation: right-to-left 5s forwards ease-in-out;
   transform-origin: center;
-   transform-box: fill-box;
+  transform-box: fill-box;
 }
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform-box */
 
@@ -464,19 +480,22 @@ transform: translateX(0) scale(1);
     padding-right: 1rem;
   }
 
-.about-section header{
-  width: 70%;
-}
+  .about-section header {
+    width: 70%;
+  }
   .intro-section {
     padding: 2rem 6rem 4rem;
   }
-.intro-subtitle{
-  font-size: 3rem;
-}
+  .intro-subtitle {
+    font-size: 3rem;
+  }
 
-.intro-tagline{
-  font-size: 1.75rem;
-}
+  .intro-tagline {
+    font-size: 1.75rem;
+  }
+  .intro-section img {
+    width: 4rem;
+  }
   .project-arrow {
     font-size: 5rem;
   }
@@ -496,7 +515,6 @@ transform: translateX(0) scale(1);
     /* width: 50%; */
     font-size: 1rem;
   }
-  
 }
 /* Media Query for large desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
@@ -505,6 +523,5 @@ transform: translateX(0) scale(1);
     font-size: 1.25rem;
   }
 }
-
 
 /* general animation references-https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations */
