@@ -22,6 +22,15 @@
 //     element.querySelector("span").style.animationDelay = `${offset}s`
 // })
 
+// https://developer.mozilla.org/en-US/dccs/Web/API/Window/scrollTo
+window.addEventListener("load",()=>{
+window.scrollTo({
+  top: 0,
+  behavior: "auto",
+});
+})
+
+
 let svgElement = document.getElementById("page-load-svg")
 let circleSvg = document.getElementById("svg-circle-one")
 circleSvg.addEventListener("animationend", () => {
