@@ -264,7 +264,7 @@ cursor: pointer;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  margin-inline: 4rem;
+  /* margin-inline: 4rem; */
   position: relative;
   
 }
@@ -280,7 +280,7 @@ cursor: pointer;
   background-color: var(--primary-font-color);
   position: absolute;
   z-index: 1;
-  /* transform: translate(10px,10px); */
+  transform: translate(20px,-20px);
   top: 0;
   left: 0;
 }
@@ -400,7 +400,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 @keyframes left-to-right{
@@ -505,3 +505,6 @@ transform: translateX(0) scale(1);
     font-size: 1.25rem;
   }
 }
+
+
+/* general animation references-https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations */

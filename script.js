@@ -22,13 +22,9 @@
 //     element.querySelector("span").style.animationDelay = `${offset}s`
 // })
 
-// https://developer.mozilla.org/en-US/dccs/Web/API/Window/scrollTo
-window.addEventListener("load",()=>{
-window.scrollTo({
-  top: 0,
-  behavior: "auto",
-});
-})
+// https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration
+// tell the browser dont change my scroll position as scrollTo didn't work
+history.scrollRestoration = "manual";
 
 
 let svgElement = document.getElementById("page-load-svg")
