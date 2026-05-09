@@ -7,7 +7,7 @@
   --font-secondary: "Azeret Mono", sans-serif;
 }
 html{
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--font-secondary);
@@ -226,8 +226,7 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 70%; */
-  max-width: fit-content;
+  width: 90%;
   margin-block: 2rem;
   /* padding-inline: 4rem; */
  
@@ -271,6 +270,7 @@ cursor: pointer;
 .image-shadow{
   position: relative;
  display: inline-block;
+ width: 80%;
 }
 .image-shadow::after{
   content: "";
@@ -280,7 +280,7 @@ cursor: pointer;
   background-color: var(--primary-font-color);
   position: absolute;
   z-index: 1;
-  transform: translate(20px,-20px);
+  transform: translate(30px,-20px);
   top: 0;
   left: 0;
 }
@@ -463,10 +463,10 @@ transform: translateX(0) scale(1);
     font-size: 5rem;
     padding-right: 1rem;
   }
-  .image-wrapper {
-    /* width: 50%; */
-    max-width: 300px;
-  }
+
+.about-section header{
+  width: 70%;
+}
   .intro-section {
     padding: 2rem 6rem 4rem;
   }
