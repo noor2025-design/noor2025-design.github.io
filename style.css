@@ -268,8 +268,11 @@ cursor: pointer;
   position: relative;
   
 }
-
-.image-wrapper > img::before{
+.image-shadow{
+  position: relative;
+ display: inline-block;
+}
+.image-shadow::after{
   content: "";
   width: 100%;
   height: 100%;
@@ -277,15 +280,16 @@ cursor: pointer;
   background-color: var(--primary-font-color);
   position: absolute;
   z-index: 1;
-  top: -12px;
-  right: -12px;
+  /* transform: translate(10px,10px); */
+  top: 0;
+  left: 0;
 }
 .image-wrapper > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 2;
-  position: relative;
+position: relative;
 }
 .project-section {
   background-color: var(--color-secondary-background);
