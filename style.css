@@ -76,20 +76,24 @@ h1::after {
     width: 30%;
   }
 }
-.intro-subtitle {
+/* .intro-subtitle,.intro-tagline {
   font-family: var(--font-primary);
-  color: var(--primary-font-color);
   font-size: 1.25rem;
   margin-block: 2rem;
+  text-align: center;
+} */
+.intro-subtitle {
+  color: var(--primary-font-color);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  margin-block: 2rem;
+  text-align: center;
 }
 
-.intro-tagline {
-  font-family: var(--font-primary);
+/* .intro-tagline {
   color: var(--color-secondary-background);
-  font-size: 1.25rem;
-  text-align: center;
-  margin-block: 2rem;
-}
+  
+} */
 
 /* h1 ANIMATION */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/white-space */
@@ -293,7 +297,7 @@ nav {
 }
 .project-section {
   background-color: var(--color-secondary-background);
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,16 +325,16 @@ nav {
 .project-section header {
   padding-block: 2rem;
   max-width: 900px;
+  position: relative;
 }
 .project-section header p {
   padding-block: 2rem;
 }
 .project-section p,
-.project-number
-{
+.project-number {
   color: var(--color-primary-background);
 }
-.project-arrow a{
+.project-arrow a {
   display: inline-flex;
   background-color: var(--primary-font-color);
   border-radius: 50%;
@@ -340,12 +344,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
-.project-arrow img{
+.project-arrow img {
   width: 2rem;
   height: 2rem;
   z-index: 1;
   position: relative;
+}
+.project-arrow a:hover {
+  transform: scale(1.1);
 }
 .project-number {
   font-size: 2rem;
@@ -371,23 +380,28 @@ nav {
   padding-block: 2rem;
   max-width: 900px;
   width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+  opacity 0.8s ease-in-out,
+  transform 0.8s ease-in-out;
+  /* transition-delay: .5s; */
+}
+.project-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.project-card::before,
-.project-card:last-of-type::after {
+.project-section header::after,
+.project-card::after {
   content: "";
   position: absolute;
   height: 1px;
   width: calc(100% - 2rem);
   background-color: var(--primary-font-color);
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-.project-card::before {
-  top: 0;
-}
-.project-card:last-of-type::after {
-  bottom: 0;
 }
 
 .project-subtitle {
@@ -408,6 +422,9 @@ footer {
   gap: 1rem;
 }
 
+footer a:hover {
+  color: var(--color-primary-background);
+}
 /* svg-animation */
 
 #page-load-svg {
@@ -464,10 +481,10 @@ footer {
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
 @media (width >= 769px) {
   h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
   .project-section {
-    padding: 2rem 8rem;
+    padding: 2rem 8rem 4rem;
   }
   h3,
   h4,
@@ -490,9 +507,9 @@ footer {
     font-size: 3rem;
   }
 
-  .intro-tagline {
+  /* .intro-tagline {
     font-size: 1.75rem;
-  }
+  } */
   .intro-section img {
     width: 4rem;
   }
@@ -515,13 +532,23 @@ footer {
     /* width: 50%; */
     font-size: 1rem;
   }
+  footer {
+    padding: 2rem 4rem;
+    flex-direction: row;
+  }
 }
-/* Media Query for large desktops */
+/* Media Query for small laptops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
 @media (width >= 1025px) {
   .about-text {
     font-size: 1.25rem;
   }
 }
-
+/* Media Query for large desktops */
+@media (width >= 1200px) {
+   h1 {
+    font-size: 7rem;
+  }
+  
+}
 /* general animation references-https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations */

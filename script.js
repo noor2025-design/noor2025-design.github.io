@@ -33,3 +33,22 @@ circleSvg.addEventListener("animationend", () => {
     svgElement.remove()
 });
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event
+
+
+let animateClass = "fade-in"
+let animateBlocks = document.querySelectorAll('.project-card') // Gets all of them.
+
+// Loop through the list, doing this `forEach` one.
+animateBlocks.forEach((block) => {
+	let sectionObserver = new IntersectionObserver(([entry])=> {
+		// When it is intersecting, apply the class; otherwise, remove it.
+		if (entry.isIntersecting) {
+			block.classList.add(animateClass)
+		} 
+	}, {
+	threshold: 1
+		
+	})
+
+	sectionObserver.observe(block) // Watch each one!
+})
