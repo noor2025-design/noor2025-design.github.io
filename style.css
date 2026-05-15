@@ -40,7 +40,7 @@ h1 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* padding-top: 4rem; */
+  
 }
 h1,
 h2 {
@@ -76,12 +76,7 @@ h1::after {
     width: 30%;
   }
 }
-/* .intro-subtitle,.intro-tagline {
-  font-family: var(--font-primary);
-  font-size: 1.25rem;
-  margin-block: 2rem;
-  text-align: center;
-} */
+
 .intro-subtitle {
   color: var(--primary-font-color);
   font-family: var(--font-primary);
@@ -90,58 +85,6 @@ h1::after {
   text-align: center;
 }
 
-/* .intro-tagline {
-  color: var(--color-secondary-background);
-  
-} */
-
-/* h1 ANIMATION */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/white-space */
-/* h1 span {
-  white-space: pre;
-} */
-/* .animate-grow{
-  display: inline-block;
-  opacity: 0;
-  animation: fade-in .2s forwards;
-  transform-origin: center;
- 
-}
-.animate-translate{
-  animation: slide-in 1.5s forwards;
-  transform: translateY(100px);
-} */
-/* bounce effect on cubic bezier https://www.jussivirtanen.fi/writing/bounce-effect */
-
-/* @keyframes grow {
-  0% {
-    transform: scale(0.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes slide-in {
-  0% {
-    transform: translateY(100px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-} */
-/* tutor helped me with applying mulitple keyframes in an animation */
-/* https://css-tricks.com/advanced-css-animation-using-cubic-bezier/ */
 
 nav {
   width: 100%;
@@ -191,7 +134,7 @@ nav {
   width: 3rem;
 }
 
-/* pulled this arrow animation from here - https://codepen.io/bisaillonyannick/pen/pvZeGg */
+/* I found a bounce keyframe animation example and modified it for my project. The animation moves an arrow up and down by shifting its vertical position at different keyframe percentages, creating a bouncing effect that loops. https://codepen.io/bisaillonyannick/pen/pvZeGg */
 @keyframes bounce {
   0%,
   20%,
@@ -207,19 +150,7 @@ nav {
     transform: translate(-50%, -15px);
   }
 }
-/* .about-section h2 {
-  padding-bottom: 1rem;
-} */
-/* .about-section h2::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: var(--color-secondary-background);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-} */
+
 .about-section {
   display: flex;
   flex-direction: column;
@@ -236,11 +167,12 @@ nav {
   align-items: center;
   width: 90%;
   margin-block: 2rem;
-  /* padding-inline: 4rem; */
+
 }
+
+/* I used the :first-of-type and :last-of-type pseudo-selectors to target specific h2 elements insid ethe about section. The :first-of-type selects the first h2 element within the parent container and :last-of-type selects the last h2 element. I needed the selectors to style and position the headings differently in the layout. The first heading is aligned to the start of the flex container and the other heading is positioned bottom using left and transform properties. Sources: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:first-of-type,https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:last-of-type  */
 .about-section h2:first-of-type {
-  /* left: 0; */
-  /* transform: translateX(50%); */
+  
   align-self: flex-start;
 }
 .about-section h2:last-of-type {
@@ -257,18 +189,13 @@ nav {
   gap: 1rem;
   padding-inline: 2rem;
 }
-/* .about-info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-} */
+
 .image-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
-  /* margin-inline: 4rem; */
+  
   position: relative;
 }
 .image-shadow {
@@ -385,7 +312,7 @@ nav {
   transition:
   opacity 0.8s ease-in-out,
   transform 0.8s ease-in-out;
-  /* transition-delay: .5s; */
+  
 }
 .project-card.fade-in {
   opacity: 1;
@@ -436,6 +363,7 @@ footer a:hover {
   z-index: 3;
 }
 
+/* I created  a keyframes animation using transform and translateX and scale properties to animate the SVG circles moving horizontally and expanding across the screen. I was having difficulty getting the SVG transformations and scaling behaviors to work correctly with positioning and how the circles expanded in the animation. A tutor helped me understand how the transform-origin and transform-box affect SVG transformations and helped troubleshoot issues with the animation I created. I understand that transform origin:center allows the SVG elements to scale outward from the center point and transform-box: fill-box ensures transforms are calculated relative to the SVG elements bounding box. Source: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform-box  */
 @keyframes left-to-right {
   0% {
     transform: translateX(0) scale(1);
@@ -475,7 +403,7 @@ footer a:hover {
   transform-origin: center;
   transform-box: fill-box;
 }
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform-box */
+
 
 /* Media Query for small desktops */
 /* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
@@ -507,9 +435,7 @@ footer a:hover {
     font-size: 3rem;
   }
 
-  /* .intro-tagline {
-    font-size: 1.75rem;
-  } */
+  
   .intro-section img {
     width: 4rem;
   }
@@ -524,12 +450,9 @@ footer a:hover {
     padding-block: 3rem;
     max-width: 900px;
   }
-  /* .about-info {
-    flex-direction: row-reverse;
-    justify-content: center;
-  } */
+ 
   .about-text {
-    /* width: 50%; */
+   
     font-size: 1rem;
   }
   footer {
@@ -538,7 +461,6 @@ footer a:hover {
   }
 }
 /* Media Query for small laptops */
-/* I pulled these key breakpoints from https://dev.to/gerryleonugroho/responsive-design-breakpoints-2025-playbook-53ih */
 @media (width >= 1025px) {
   .about-text {
     font-size: 1.25rem;
@@ -551,4 +473,4 @@ footer a:hover {
   }
   
 }
-/* general animation references-https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations */
+

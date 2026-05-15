@@ -1,29 +1,8 @@
-// let introHeading = document.querySelector(".intro-section h1")
-// let introHeadingText = introHeading.textContent
 
-// let spanText = ""
+//  I noticed that when the page-load animation plays, the scroll position would change depending on where I was on the page. I tried using scrollTo() to fix it but it didnt work. I then found scrollRestoration and set it to "manual" to tell the browser not to touch the scroll position. It somewhat works but isn't completely functional yet.
+// Source: https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration
 
-// let introHeadingArray = introHeadingText.split("")
-// console.log(introHeadingArray);
-// splits a string into an array 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-
-// introHeadingArray.forEach((character)=>{
-// let spanElement = `<span class="animate-translate"><span class="animate-grow">${character}</span></span>`    
-// spanText += spanElement
-// })
-// introHeading.innerHTML = spanText
-// we loop through the array and add each template to the span text using +=
-// let allSpanElements = document.querySelectorAll("h1 > span")
-// allSpanElements.forEach((element)=>{
-    // creates a random number between 0-.5
-//     let offset = Math.random()*1
-//     element.style.animationDelay = `${offset}s`
-//     element.querySelector("span").style.animationDelay = `${offset}s`
-// })
-
-// https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration
-// tell the browser dont change my scroll position as scrollTo didn't work
+// tell the browser to not change the scroll position as "scrollTo" didn't work
 history.scrollRestoration = "manual";
 
 
@@ -32,7 +11,7 @@ let circleSvg = document.getElementById("svg-circle-one")
 circleSvg.addEventListener("animationend", () => {
     svgElement.remove()
 });
-// https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event
+// I used the animationend event listener to detect when the svg circle animation finished playing. Once the animnation ends, the SVG loading element is removed from the page using .remove(). This automatically hid the loading animation after it was completed. Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event
 
 
 let animateClass = "fade-in"
