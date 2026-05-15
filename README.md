@@ -25,13 +25,14 @@ The page guides the user through a clear experience, starting with my name
 and role, moving into a brief about me introduction, and then laying out 
 my six projects with simple animations that bring each card into view.
 
-## Project Respositories
-### Project 1 - Manuscript (
-### Project 2 - Spread
-### Project 3 - Binding
-### Project 4 - Links
-### Project 5 - Functions
-### Project 6 - Portrait
+## Index and Project Respositories
+#### Index - (https://github.com/noor2025-design/noor2025-design.github.io/)
+#### Project 1 - Manuscript (https://github.com/noor2025-design/manuscript/)
+#### Project 2 - Spread (https://github.com/noor2025-design/spread/)
+#### Project 3 - Binding (https://github.com/noor2025-design/binding/)
+#### Project 4 - Links (https://github.com/noor2025-design/links/)
+#### Project 5 - Functions (https://github.com/noor2025-design/functions/)
+#### Project 6 - Portrait (https://github.com/noor2025-design/portrait/)
 
 ## Academic Context
 This index page was created as a landing page for all of my web design projects 
