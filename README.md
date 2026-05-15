@@ -25,6 +25,14 @@ The page guides the user through a clear experience, starting with my name
 and role, moving into a brief about me introduction, and then laying out 
 my six projects with simple animations that bring each card into view.
 
+## Project Respositories
+### Project 1 - Manuscript (
+### Project 2 - Spread
+### Project 3 - Binding
+### Project 4 - Links
+### Project 5 - Functions
+### Project 6 - Portrait
+
 ## Academic Context
 This index page was created as a landing page for all of my web design projects 
 completed as part of the curriculum for MPS-CD program for Typography & Interaction at Parsons School 
